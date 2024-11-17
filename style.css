@@ -52,16 +52,18 @@ header .container a img{
 #white-button{
     background-color: #F5F7FA;
     color: #4CAF4F;
-    padding: 0.8em 1.6em;
+    padding: 0.8em 1em;
     border-radius: 5px;
     text-decoration: none;
 }
 #green-button{
     background-color: #4CAF4F;
     color: #F5F7FA;
-    padding: 0.8em 1.6em;
+    padding: 0.8em 1em;
     border-radius: 5px;
     text-decoration: none;
+    text-align: center;
+    
 }
 #white-button:hover{
     border: 1px solid #4CAF4F;
@@ -124,7 +126,9 @@ main{
 }
 .main-img-container{
     width: 50%;
-    padding-left: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 .main-img-container img{
     height: auto;
@@ -156,6 +160,19 @@ footer{
     }
     #open-sidebar img{
         height: 14px;
+    }
+    main{
+        font-size: 11px;
+    }
+    .main-img-container img{
+        width: 300px;
+        height: 100%;
+    }
+    .lessons-container h1{
+        font-size: 50px;
+    }
+    .lessons-container p{
+        font-size: 12px;
     }
 }
 @media(max-width: 800px){
@@ -228,8 +245,32 @@ footer{
     main{
         font-size: 11px;
     }
+    .main-container .container{
+        padding: 4em 6em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .lessons-container{
+        width: 100%;
+    }
+    
+    .main-img-container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     footer{
         font-size: 11px;
     }
     
+}
+@media(max-width: 500px){
+    .lessons-container h1{
+        font-size: 40px;
+    }
+    .lessons-container p{
+        font-size: 9px;
+    }
 }
