@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header header"
+    "main sidebar"
+    "footer sidebar";
+}
+header{
+    top: 0;
+    position: sticky;
+    grid-area: header;
+    background-color: #F5F7FA;
+    color: white;
+    padding: 1em 6em;
+    font-size: 16px;
+}
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container a img{
+    height: 24px;
+}
+.header-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    list-style-type: none;
+}
+.header-nav-item a{
+    color: black;
+    text-decoration: none;
+}
+.header-nav-item a:hover{
+    color: #4CAF4F;
+}
+.auth-button-container{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+#white-button{
+    background-color: #F5F7FA;
+    color: #4CAF4F;
+    padding: 0.8em 1.6em;
+    border-radius: 5px;
+    text-decoration: none;
+}
+#green-button{
+    background-color: #4CAF4F;
+    color: #F5F7FA;
+    padding: 0.8em 1.6em;
+    border-radius: 5px;
+    text-decoration: none;
+}
+#white-button:hover{
+    border: 1px solid #4CAF4F;
+    color: #4CAF4F;
+    background-color: #F5F7FA;
+}
+#green-button:hover{
+    border: 1px solid #4CAF4F;
+    background-color: #F5F7FA;
+    color: #4CAF4F;
+}
+#open-sidebar{
+    display: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+#open-sidebar img{
+    background-color: #F5F7FA;
+    display: block;
+}
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+.main-container{
+    margin: 0;
+    background-color: #F5F7FA;
+    padding: 0;
+}
+.main-container .container{
+    padding: 4em 6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.lessons-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.lessons-container h1{
+    font-size: 64px;
+    color: #4D4D4D;
+}
+.lessons-container h1 span{
+    color: #4CAF4F;
+}
+.lessons-container p{
+    color: #717171;
+    font-size: 16px;
+}
+.lessons-container a{
+    width: 20%;
+}
+.main-img-container{
+    width: 50%;
+    padding-left: 5em;
+}
+.main-img-container img{
+    height: auto;
+    width: auto;
+}
+aside{
+    display: none;
+    grid-area: sidebar;
+    background-color: grey;
+    right: 0;
+    height: calc(100vh - 41.2px);
+    top: 41.2px;
+    position: sticky;
+    align-self: start;
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    padding: 2em 6em;
+    font-size: 16px;
+}
+@media(max-width: 1080px){
+    header .container a img{
+        height: 12px;
+    }
+    header{
+        font-size: 11px;
+    }
+    #open-sidebar img{
+        height: 14px;
+    }
+}
+@media(max-width: 800px){
+    #open-sidebar{
+        display: block;
+    }
+    aside{
+        position: fixed;
+        width: 300px;
+    }
+    .show{
+        display: block;
+        padding: 2em;
+    }
+    .header-nav{
+        display: none;
+    }
+    .auth-button-container{
+        display: none;
+    }
+    aside .container{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .aside-nav{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        list-style-type: none;
+    }
+    .header-nav-item a{
+        color: black;
+        text-decoration: none;
+    }
+    .header-nav-item a:hover{
+        color: #4CAF4F;
+    }
+    .aside-auth-button-container{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    #aside-white-button{
+        background-color: #F5F7FA;
+        color: #4CAF4F;
+        padding: 0.8em 1.6em;
+        border-radius: 10px;
+        text-decoration: none;
+        width: 50%;
+    }
+    #aside-green-button{
+        background-color: #4CAF4F;
+        color: #F5F7FA;
+        padding: 0.8em 1.6em;
+        border-radius: 10px;
+        text-decoration: none;
+        width: 50%;
+    }
+    #aside-white-button:hover{
+        border: 1px solid #4CAF4F;
+        color: #4CAF4F;
+        background-color: #F5F7FA;
+    }
+    #aside-green-button:hover{
+        border: 1px solid #4CAF4F;
+        background-color: #F5F7FA;
+        color: #4CAF4F;
+    }
+    main{
+        font-size: 11px;
+    }
+    footer{
+        font-size: 11px;
+    }
+    
+}
